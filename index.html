@@ -3,26 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EABL MERCHANDIZING</title>
+    <title>EABL MERCHANDISING</title>
     <style>
-        /* Centering the Tableau embed container */
-        .center-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Full viewport height */
+        /* Container for full scrollability and removal of center alignment */
+        .scroll-container {
+            overflow: auto; /* Enable both horizontal and vertical scrolling */
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+        }
+        
+        /* Adjust Tableau embed to prevent truncation */
+        .tableauPlaceholder {
+            min-width: 1466px; /* Tableau's original width */
+            width: 100%; /* Let it expand fully */
+            height: 918px; /* Set a fixed height */
         }
     </style>
 </head>
 <body>
-    <div class="center-container">
+    <div class="scroll-container">
         <div class='tableauPlaceholder' id='viz1728584228456' style='position: relative'>
             <noscript>
                 <a href='#'>
                     <img alt=' ' src='https://public.tableau.com/static/images/EA/EABLTBLDASH/STORY/1_rss.png' style='border: none' />
                 </a>
             </noscript>
-            <object class='tableauViz' style='display:none;'>
+            <object class='tableauViz' style='display:none; width: 1466px; height: 918px;'>
                 <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                 <param name='embed_code_version' value='3' />
                 <param name='site_root' value='' />
@@ -43,8 +49,6 @@
     <script type='text/javascript'>
         var divElement = document.getElementById('viz1728584228456');
         var vizElement = divElement.getElementsByTagName('object')[0];
-        vizElement.style.width='1466px';
-        vizElement.style.height='918px';
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
