@@ -7,14 +7,19 @@
     <style>
         /* Container for full scrollability and removal of center alignment */
         .scroll-container {
-            overflow: auto; /* Enable both horizontal and vertical scrolling */
-            width: 100vw; /* Full width of the viewport */
+            
+            position: relative;
+            width: 1466px;
+            height: 918px;
+            overflow: scroll;
+            display: block;
+            width: 99vw; /* Full width of the viewport */
             height: 100vh; /* Full height of the viewport */
         }
         
         /* Adjust Tableau embed to prevent truncation */
         .tableauPlaceholder {
-            min-width: 1466px; /* Tableau's original width */
+            min-width: 1666px; /* Tableau's original width */
             width: 100%; /* Let it expand fully */
             height: 918px; /* Set a fixed height */
         }
